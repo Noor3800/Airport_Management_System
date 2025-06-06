@@ -51,6 +51,7 @@ Interfaces:
 •	PaymentProcessor: processPayment(double amount)
 
 Classes:
+
 a.	Log (Class implementing Loggable):
 Methods: logActivity()
 
@@ -59,6 +60,7 @@ Methods: inspect()
 
 c.	PaymentService (Class implementing PaymentProcessor):
 Methods: processPayment()
+
 d.	Airport:
 Attributes: AirportCode, Location, Flights[], Passengers[], Staff[], Logs[]
 Methods: ScheduleFlight(), ManagePassenger(), UpdateSecurityStatus()
@@ -93,23 +95,35 @@ Methods: PerformMaintenance(), ScheduleMaintenance(), UpdateStatus()
 
 l.	Check-In:
 Attributes: CheckInID, PassengerID, FlightNumber, Status (BoardingStatus)
+
 Methods: ProcessCheckIn(), UpdateStatus(), PrintBoardingPass()
 
 m.	Boarding:
 Attributes: BoardingID, FlightNumber, PassengerID, Status (BoardingStatus)
+
 Methods: BoardPassenger(), UpdateStatus(), VerifyBoardingPass()
 
 3.	Relationships:
 •	Airport has associations with Flight, Passenger, Cargo, Airport Staff, Baggage, Security Check, Maintenance, Check-In, and Boarding classes.
+
 •	Airport logs activities through the Logs[] attribute.
+
 •	Flight is associated with Airport, Passenger, Baggage, and Boarding.
+
 •	FlightStatus (Enum) is an attribute indicating the status of the flight.
+
 •	Passenger is associated with Airport, Flight, Baggage, Check-In, and Boarding.
+
 •	PaymentService (Interface) is used for payment-related functionality.
+
 •	Cargo is associated with Airport.
+
 •	CargoStatus (Enum) is an attribute indicating the status of the cargo.
+
 •	Airport Staff is associated with Airport and Security Check.
+
 •	Baggage is associated with Airport, Flight, Passenger, and Security Check.
+
 •	Security Check is associated with Airport, Airport Staff, Passenger, and Baggage.
 •	SecurityStatus (Enum) is an attribute indicating the security status of the baggage and security check.
 •	Maintenance is associated with Airport and Flight.
