@@ -213,3 +213,21 @@ Methods: BoardPassenger(), UpdateStatus(), VerifyBoardingPass()
 •	Log is associated with the Airport class.
 
 •	BoardingStatus (Enum) is an attribute indicating the boarding status.
+
+
+4.UML Class Diagram : 
+
+Creating a UML Class Diagram involves using a specific set of symbols and 
+notation to represent the classes and their relationships visually. In a text-based 
+medium like this, describing the UML diagram is not practical. Instead, the 
+relationships can be summarized as follows: 
+
+ Flights have many-to-many relationship with passengers. 
+
+ Passengers have one-to-many relationship with baggage. 
+
+ Airport has one-to-many relationship with Passengers and staff. 
+
+ Passengers have aggregation relationship with baggage. 
+
+ Maintaince is associated with Flights and Airport.
